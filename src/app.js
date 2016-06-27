@@ -1,4 +1,4 @@
-/* global app, $on */
+/* global app, $on, log */
 (function() {
   'use strict'
 
@@ -18,6 +18,7 @@
   function setView() {
     var todo = new Todo('todos-vanillajs')
     todo.controller.setView(document.location.hash)
+    log('view set')
   }
 
   $on(window, 'load', setView)
